@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Country = (props) => {
-   const {name, nativeName, capital, region, subregion, area, population, timezones, alpha3Code, flag} = props.country;
+   const {name, nativeName, capital, region, subregion, area, population, timezones, alpha3Code, flag, currencies} = props.country;
 //    const handleAddCountry = () => {console.log('added')}
    const countryStyle = {
        border: '1px solid purple',

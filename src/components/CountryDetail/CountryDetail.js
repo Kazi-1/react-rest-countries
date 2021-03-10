@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Detail from '../Detail/Detail';
 
 const CountryDetail = () => {
     const {countryId} = useParams();
@@ -13,11 +14,9 @@ const CountryDetail = () => {
       
     }, [])
     return (
-        <div>
-            <p>this is a country detail component: {countryId}</p>
-            
+        <div>  
             {
-                country.map(country => country.name)
+                country.map(country => <Detail detail={country}></Detail>)
             }
             
         </div>

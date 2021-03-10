@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Detail from '../Detail/Detail';
+import './CountryDetail.css';
 
 const CountryDetail = () => {
     const {countryId} = useParams();
@@ -12,13 +13,13 @@ const CountryDetail = () => {
         .then(data =>  setCountry(data))
         .catch(error => console.log(error))
       
-    }, [])
+    }, [countryId])
     return (
         <div>  
             {
                 country.map(country => <Detail detail={country}></Detail>)
             }
-            
+        
         </div>
     );
 };
